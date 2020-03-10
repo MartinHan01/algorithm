@@ -1,16 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define MaxSize 50
-
-
-//ElemType
-//
-//typedef struct {
-//    ElemType date[MaxSize];
-//    int length
-//} SqList;
+#include "list.h"
 
 int main() {
     printf("Hello, World!\n");
+    SqList list;
+    InitList(&list);
+    printList(&list);
+    ansReplaceMin2_2_3_2_2(&list);
+    printList(&list);
     return 0;
 }
