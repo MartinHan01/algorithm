@@ -18,6 +18,12 @@ typedef struct {
 void InitList(SqList *L);
 void printList(SqList *L);
 
-ElemType ansReplaceMin2_2_3_2_2(SqList *L);
+ElemType ansReplaceMin2_1(SqList *L);
+void ansReverse2_2(SqList *L);
+void ansDeleteElem2_3(SqList *L, ElemType val);
+void ansDelBetween2_4(SqList *L, ElemType begin, ElemType end);
+void ansDelBetween2_5(SqList *L, ElemType begin, ElemType end);
+void ansDelRepeat2_6(SqList *L);
+
 
 #endif //INC_2_2_LIST_H
