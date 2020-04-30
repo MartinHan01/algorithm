@@ -15,15 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LinearList.cpp">
+    <ClCompile Include="singly-linked-list-741.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LinearList.h">
+    <ClInclude Include="MyLinkedList.cpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
