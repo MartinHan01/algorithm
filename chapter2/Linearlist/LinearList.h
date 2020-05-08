@@ -19,7 +19,7 @@ typedef struct {
 void InitList(SqList& L);
 int Length(SqList& L);
 int LocateElem(SqList& L, ElemType& e);
-ElemType GetElem(SqList& L, int i);
+ElemType GetElem(SqList& L, int idx);
 void ListInsert(SqList &L, int i, ElemType& e);
 void ListDelete(SqList& L, int i, ElemType& e);
 void PrintList(SqList& L);

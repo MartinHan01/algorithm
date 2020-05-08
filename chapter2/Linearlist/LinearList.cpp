@@ -1,18 +1,27 @@
 #include "LinearList.h"
 void InitList(SqList& L) {
-	for (int i = 0; i < 10; i++) {
+	int length = 10;
+	for (int i = 0; i < length; i++) {
 		L.data[i] = (i + 1) * 2 - 1;
 	}
-	L.length = 10;
+	L.length = length;
 }
 int Length(SqList& L) {
 	return L.length;
 }
 int LocateElem(SqList& L, ElemType& e) {
-	return 0;
+	for (int i = 0; i < L.length; i++) {
+		if (e == L.data[i]) {
+			return i;
+		}
+	}
+	return -1;
 }
-ElemType GetElem(SqList& L, int i) {
-	return 0;
+ElemType GetElem(SqList& L, int idx) {
+	if (idx > L.length - 1) {
+		return -1;
+	}
+	return L.data[idx];
 }
 void ListInsert(SqList& L, int i, ElemType& e) {
 
