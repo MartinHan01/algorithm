@@ -12,7 +12,7 @@ int Length(SqList& L) {
 int LocateElem(SqList& L, ElemType& e) {
 	for (int i = 0; i < L.length; i++) {
 		if (e == L.data[i]) {
-			return i;
+			return i + 1; //返回位序 i+1
 		}
 	}
 	return -1;
@@ -23,11 +23,30 @@ ElemType GetElem(SqList& L, int idx) {
 	}
 	return L.data[idx];
 }
-void ListInsert(SqList& L, int i, ElemType& e) {
-
+bool ListInsert(SqList& L, int pos, ElemType& e) {
+	if (pos < 1 || pos > L.length + 1) {
+		return false;
+	}
+	if (L.length >= MaxSize) {
+		return false;
+	}
+	for (int i = L.length; i >= pos; i--) { //在pos位序后面插入
+		L.data[i] = L.data[i - 1];
+	}
+	L.data[pos] = e;
+	L.length++;
+	return true;
 }
-void ListDelete(SqList& L, int i, ElemType& e) {
-
+bool ListDelete(SqList& L, int pos, ElemType& e) { //删除位序pos那个节点
+	if (pos < 1 || pos > L.length) {
+		return false;
+	}
+	e = L.data[pos - 1];
+	for (int i = pos - 1; i < L.length - 1; i++) {
+		L.data[i] = L.data[i + 1];
+	}
+	L.length--;
+	return true;
 }
 void PrintList(SqList& L) {
 	for (int i = 0; i < L.length; i++) {
